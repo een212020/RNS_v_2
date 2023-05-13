@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_32_31_21_5();
+module tb_BIN2RNS_32_31_21_5();
     // Size of dynamic range to be represented by the moduli set
     localparam DYN_SIZE = 16;
     // size of the moduli
@@ -17,8 +17,8 @@ module tb_32_31_21_5();
     
     // LUT sizes obtained from MATLAB script
     localparam LUT_SIZE_MOD_2 = 10;
-    localparam LUT_SIZE_MOD_3 = 290;
-    localparam LUT_SIZE_MOD_4 = 33;
+    localparam LUT_SIZE_MOD_3 = 0;
+    localparam LUT_SIZE_MOD_4 = 78;
     
     reg clk, reset;
     reg [DYN_SIZE - 1:0] N;
@@ -38,7 +38,7 @@ module tb_32_31_21_5();
         reset = 1; #0.5
         reset = 0;
         
-        for (i=1; i<100; i=i+1)begin
+        for (i=0; i<2^DYN_SIZE; i=i+1)begin
             N = i;
             $fwrite(f,"%d %d %d %d\n",out_mod_1, out_mod_2, out_mod_3, out_mod_4);
             #2;
