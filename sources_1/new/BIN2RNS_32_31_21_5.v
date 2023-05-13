@@ -33,8 +33,8 @@ module BIN2RNS_32_31_21_5(
     
     // LUT sizes obtained from MATLAB script
     localparam LUT_SIZE_MOD_2 = 10;
-    localparam LUT_SIZE_MOD_3 = 290;
-    localparam LUT_SIZE_MOD_4 = 33;
+    localparam LUT_SIZE_MOD_3 = 0;
+    localparam LUT_SIZE_MOD_4 = 78;
     
     input clk, reset;
     input [DYN_SIZE - 1:0] N;
