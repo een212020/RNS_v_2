@@ -1,3 +1,5 @@
+% Script for writing LUT file for given module for period based residue 
+% generator
 n_bits = 16; % max input bits
 max_n = 2^n_bits -1; % max value of input
 m = 105; % moduli value
