@@ -16,18 +16,18 @@ module RNS2BIN_2(
     //number of moduli
     parameter MOD_NUM = 4;
     //max size of moduli
-    parameter MOD_SIZE = 5;
+    parameter MOD_SIZE = 3;
     //size of dynamic range of the representation
     parameter RANGE = MOD_NUM * MOD_SIZE;
     
-    parameter LUT_SIZE = 128;
-    parameter LUT_BIT_LENGTH = 8;
+    parameter LUT_SIZE = 8;
+    parameter LUT_BIT_LENGTH = 2;
     
     input clk, reset;
     //moduli values
     input [MOD_SIZE : 0] mod_1, mod_2, mod_3, mod_4;
     // for storing modulo inverses calculated using ext_euc MATLAB script
-    input [LUT_SIZE-1: 0] inv;
+    input [0:LUT_SIZE-1] inv;
     //residue coefficients
     input [MOD_SIZE - 1: 0] c0, c1, c2, c3;
     //output binary number
